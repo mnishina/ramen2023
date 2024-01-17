@@ -10,27 +10,6 @@ html,
 body {
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-      180deg,
-      #df08f2 0%,
-      #e009f0 11.79%,
-      #e00eeb 21.38%,
-      #e116e2 29.12%,
-      #e21fd6 35.34%,
-      #e32bc8 40.37%,
-      #e439b7 44.56%,
-      #e648a5 48.24%,
-      #e75992 51.76%,
-      #e96a7e 55.44%,
-      #ea7b69 59.63%,
-      #ec8d54 64.66%,
-      #ee9e40 70.88%,
-      #efae2c 78.62%,
-      #f1be19 88.21%,
-      #f2cd08 100%
-    )
-    no-repeat fixed;
-
   color: var(--black);
   font-family: var(--ff-base);
 }
@@ -40,6 +19,36 @@ html {
 }
 body {
   font-size: 1.6rem;
+
+  &:before {
+    content: "";
+    z-index: -1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        180deg,
+        #df08f2 0%,
+        #e009f0 11.79%,
+        #e00eeb 21.38%,
+        #e116e2 29.12%,
+        #e21fd6 35.34%,
+        #e32bc8 40.37%,
+        #e439b7 44.56%,
+        #e648a5 48.24%,
+        #e75992 51.76%,
+        #e96a7e 55.44%,
+        #ea7b69 59.63%,
+        #ec8d54 64.66%,
+        #ee9e40 70.88%,
+        #efae2c 78.62%,
+        #f1be19 88.21%,
+        #f2cd08 100%
+      )
+      no-repeat;
+  }
 }
 
 .globalContainer {
