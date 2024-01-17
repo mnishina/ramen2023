@@ -1,0 +1,28 @@
+@use "../../foundation/value" as *;
+@use "../../foundation/mixin" as *;
+
+.load {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: fit-content;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  font-weight: normal;
+  font-family: var(--ff-maru);
+  line-height: 1;
+  @include fzSP(32, 40);
+
+  span {
+    @include fzSP(68, 72);
+    display: inline-block;
+    margin-right: 0.05em;
+
+    @include mq($mq-pc) {
+      @include fzPC(94);
+    }
+  }
+}

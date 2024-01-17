@@ -1,0 +1,38 @@
+@use "../../foundation/value" as *;
+@use "../../foundation/mixin" as *;
+
+footer {
+  text-align: center;
+  padding: 4em 1em 4em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+
+  @include mq($mq-pc) {
+    padding: 0;
+    text-align-last: left;
+    position: fixed;
+    left: 1.5em;
+    bottom: 1.5em;
+    gap: 0.75em;
+  }
+
+  div {
+    @include fzSP(10, 12);
+    font-family: var(--ff-serif);
+
+    @include mq($mq-pc) {
+      @include fzPC(10);
+    }
+  }
+
+  small {
+    display: block;
+    font-family: var(--ff-small);
+    @include fzSP(20, 24);
+
+    @include mq($mq-pc) {
+      @include fzPC(24);
+    }
+  }
+}

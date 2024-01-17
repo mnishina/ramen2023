@@ -1,0 +1,61 @@
+@use "../../foundation/value" as *;
+@use "../../foundation/mixin" as *;
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+
+  max-width: 600px;
+  margin: 0 auto;
+
+  @include mq($mq-pc) {
+    max-width: 100%;
+    grid-column: 6 / span 7;
+    grid-template-rows: max-content;
+
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+
+    gap: 6em;
+  }
+
+  li {
+    text-align: center;
+    @include mq($mq-pc) {
+      width: 70%;
+    }
+
+    &:nth-child(even) {
+      @include mq($mq-pc) {
+        margin-left: auto;
+      }
+    }
+
+    .meta {
+      margin-top: -0.5em;
+      position: relative;
+      z-index: 10;
+
+      .date {
+        @include fzSP(32, 40);
+        line-height: 1;
+        font-family: var(--ff-maru);
+
+        @include mq($mq-pc) {
+          @include fzPC(40);
+        }
+      }
+      .name {
+        @include fzSP(60, 60);
+        line-height: 1;
+        font-family: var(--ff-line);
+        font-weight: normal;
+
+        @include mq($mq-pc) {
+          @include fzPC(60);
+        }
+      }
+    }
+  }
+}

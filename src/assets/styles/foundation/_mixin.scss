@@ -1,0 +1,13 @@
+@mixin fzPC($fz) {
+  font-size: calc(#{$fz} / 1280 * 100vw);
+}
+
+@mixin fzSP($fz, $maxfz) {
+  font-size: min(calc(#{$fz} / 375 * 100vw), #{$maxfz}px);
+}
+
+@mixin mq($breakpoint) {
+  @media screen and (min-width: #{$breakpoint}px) {
+    @content;
+  }
+}

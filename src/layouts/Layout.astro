@@ -1,0 +1,32 @@
+---
+import "@fontsource/noto-sans-jp";
+import '@fontsource/modak';
+import '@fontsource/train-one';
+import '@fontsource/libre-barcode-128-text';
+import '@fontsource/inter';
+import "@css/style.scss";
+
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+---
+<script type="module" src='/src/assets/js/main.js'></script>
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+
+		<canvas id="canvas"></canvas>
+	</body>
+</html>
