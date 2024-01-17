@@ -9,5 +9,9 @@ export default defineConfig({
     plugins: [glslify()]
   },
   output: "server",
-  adapter: vercel()
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    },
+  })
 });
