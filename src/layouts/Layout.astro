@@ -13,8 +13,10 @@ interface Props {
 
 const { title, description } = Astro.props;
 ---
-<script type="module" src='/src/assets/js/main.js'></script>
-
+<!-- <script type="module" src='/src/assets/js/main.js'></script> -->
+<script>
+	import "../assets/js/index";
+</script>
 <!doctype html>
 <html lang="en">
 	<head>
