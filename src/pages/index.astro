@@ -19,12 +19,12 @@ const info = {
           return (
             <li>
               <a href={`${d.url}`} target="_blank">
-              <img src={`/assets/img/${d.image}`} alt="aa" data-webgl data-tex={`/assets/img/${d.image}`}>
-              <div class="meta">
-                <div class="date">{d.date}</div>
-                <h2 class="name">{d.name}</h2>
-              </div>
-            </a>
+                <img src={`/assets/img/${d.image}`} alt={d.name} data-webgl data-tex={`/assets/img/${d.image}`}>
+                <div class="meta">
+                  <div class="date">{d.date}</div>
+                  <h2 class="name">{d.name}</h2>
+                </div>
+              </a>
             </li>
           )
         })}
